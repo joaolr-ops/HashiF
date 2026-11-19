@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/painel-parceiro.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/painel-loja.css">
+    <link rel="stylesheet" href="../css/operacao-loja.css">
+    <title>Hashi</title>
+    <link rel="stylesheet" href="../css/apresentacao.css">
+</head>
+<body data-painel-perfil="loja">
+    <header>
+        <div class="logo-group">
+            <img class="hashi-header" src="../Img-pagina-inicial/Logo-Site.png" alt="Logo Hashi na cor branca">
+            <img class="hashi-header-logo" src="../Img-pagina-inicial/Logo-hashi.png" alt="Logo Hashi na cor branca versão escrita">
+        </div>
+
+        <nav class="nav-links">
+            <a data-inicio-hashi href="index-loja.html">Início</a>
+            <a class="cardapios" href="cardapios-loja.html">Cardápios</a>
+            <a class="promocoes" href="promocoes-loja.html">Promoções</a>
+            <a class="ajuda" href="atendimento-loja.html">Ajuda</a>
+            <a href="painel-loja.html" class="loja-secao-atual">Loja</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="pesquisa-atalho" href="pesquisa-loja.html" aria-label="Pesquisar lojas e itens">
+                <svg class="lupa" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.5"/>
+                    <path d="m15.5 15.5 6 6"/>
+                </svg>
+            </a>
+
+
+            <a class="conta-buttom" href="conta-loja.html">
+                <svg class="conta-icon" viewBox="3 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M5 19c1.2-3.2 4-5 7-5s5.8 1.8 7 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <span class="perfil-nome" data-nome-conta>Minha conta</span>
+            </a>
+
+
+            <a class="cart-icon-wrapper" id="carrinho" href="carrinho-loja.html" aria-label="Carrinho">
+                <img class="cart-icon" src="../Img-pagina-inicial/Carrinho-icon2.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- Divisor separado do header -->
+    <div class="header-divider" role="presentation"></div>
+
+    <main class="painel-loja catalogo-pagina">
+        <nav class="catalogo-caminho" aria-label="Posição no site">
+            <a href="painel-loja.html">Minha loja</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Gerenciar cardápio</span>
+        </nav>
+        <section class="catalogo-abertura" aria-labelledby="titulo-gerenciar">
+            <h1 id="titulo-gerenciar">Gerenciar cardápio</h1>
+        </section>
+        <nav class="catalogo-navegacao" aria-label="Gerenciamento do cardápio">
+            <a href="#catalogo-loja" class="catalogo-aba-produtos">Produtos</a>
+            <a href="#novo-item">Adicionar item</a>
+            <a href="#nova-promocao">Nova promoção</a>
+        </nav>
+        <section class="loja-bloco operacao-secao catalogo-admin" id="catalogo-loja" aria-labelledby="titulo-catalogo">
+            <h2 id="titulo-catalogo" class="catalogo-titulo-lista">Produtos</h2>
+            <fieldset class="catalogo-filtros">
+                <legend>Filtrar por categoria</legend>
+                <label><input type="radio" name="filtro-itens" value="todos" checked> <span>Todos</span></label>
+                <label><input type="radio" name="filtro-itens" value="combos"> <span>Combos</span></label>
+                <label><input type="radio" name="filtro-itens" value="sushis"> <span>Sushis</span></label>
+                <label><input type="radio" name="filtro-itens" value="temakis"> <span>Temakis</span></label>
+                <label><input type="radio" name="filtro-itens" value="hot-rolls"> <span>Hot rolls</span></label>
+                <label><input type="radio" name="filtro-itens" value="sobremesas"> <span>Sobremesas</span></label>
+            </fieldset>
+            <div class="catalogo-tabela">
+                <div class="catalogo-cabecalho-lista" aria-hidden="true">
+                    <span>Produto</span><span>Preço</span><span>Status</span><span>Ação</span>
+                </div>
+                <div class="catalogo-lista">
+                    <details class="catalogo-item" data-categoria="combos">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Prato-Sushi-principal.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Combo especial</strong><small>Combos</small></span>
+                            <strong class="catalogo-preco">R$ 99,99</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Combo especial"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="99.99"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">30 peças variadas</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="sushis">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Sushi de salmão</strong><small>Sushis</small></span>
+                            <strong class="catalogo-preco">R$ 34,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Sushi de salmão"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="34.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">8 peças de salmão</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="temakis">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Temaki de salmão</strong><small>Temakis</small></span>
+                            <strong class="catalogo-preco">R$ 36,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Temaki de salmão"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="36.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">Salmão, arroz e cebolinha</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="hot-rolls">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Hot roll crocante</strong><small>Hot rolls</small></span>
+                            <strong class="catalogo-preco">R$ 32,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Hot roll crocante"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="32.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">10 peças com cream cheese</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="combos">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Combo clássico</strong><small>Combos</small></span>
+                            <strong class="catalogo-preco">R$ 69,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Combo clássico"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="69.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">20 peças selecionadas</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="sushis">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Uramaki Philadelphia</strong><small>Sushis</small></span>
+                            <strong class="catalogo-preco">R$ 29,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Uramaki Philadelphia"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="29.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">8 peças com salmão e cream cheese</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                    <details class="catalogo-item" data-categoria="sobremesas">
+                        <summary>
+                            <img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="56" height="56" loading="lazy">
+                            <span class="catalogo-produto"><strong>Mochi de morango</strong><small>Sobremesas</small></span>
+                            <strong class="catalogo-preco">R$ 18,90</strong>
+                            <span class="catalogo-estado">Disponível</span>
+                            <span class="catalogo-editar">Editar <span aria-hidden="true">&#8964;</span></span>
+                        </summary>
+                        <div class="catalogo-edicao operacao-form">
+                            <label>Nome <input value="Mochi de morango"></label>
+                            <label>Preço (R$) <input type="number" min="0.01" step="0.01" value="18.90"></label>
+                            <label class="catalogo-campo-largo">Descrição <textarea rows="2">2 unidades</textarea></label>
+                            <label>Disponibilidade <select><option>Disponível</option><option>Pausado</option></select></label>
+                            <label>Foto do produto <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+                            <button type="button" class="loja-acao loja-acao-principal" disabled>Salvar alterações</button>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <div class="catalogo-formularios">
+            <section class="loja-bloco" id="novo-item">
+                <h2>Novo item</h2>
+                <form class="operacao-form" data-novo-item><button type="submit" hidden disabled></button>
+                    <label>Nome do item <input name="nome" maxlength="80" required></label>
+                    <label>Categoria
+                        <input name="categoria" list="categorias-cardapio" maxlength="60" placeholder="Escolha ou digite uma categoria" required>
+                    </label>
+                    <datalist id="categorias-cardapio">
+                        <option value="Combos"></option>
+                        <option value="Sushis"></option>
+                        <option value="Temakis"></option>
+                        <option value="Hot rolls"></option>
+                        <option value="Sobremesas"></option>
+                    </datalist>
+                    <label class="catalogo-campo-largo">Descrição <textarea name="descricao" maxlength="240" required></textarea></label>
+                    <label>Preço (R$) <input name="preco" type="number" min="0.01" max="99999" step="0.01" required></label>
+                    <label class="catalogo-campo-largo">Foto do produto (opcional)
+                        <input type="file" name="foto" accept="image/jpeg,image/png,image/webp">
+                        <small>JPG, PNG ou WebP de até 10 MB.</small>
+                    </label>
+                    <button disabled type="submit" class="loja-acao loja-acao-principal">Publicar item</button>
+                    <p role="status"></p>
+                </form>
+            </section>
+            <section class="loja-bloco" id="nova-promocao">
+                <h2>Nova promoção</h2>
+                <form class="operacao-form" data-nova-promocao><button type="submit" hidden disabled></button>
+                    <label>Item <select name="item" required><option>Combo especial</option><option>Sushi de salmão</option><option>Temaki de salmão</option><option>Hot roll crocante</option><option>Combo clássico</option><option>Uramaki Philadelphia</option><option>Mochi de morango</option></select></label>
+                    <label>Preço promocional (R$) <input name="preco" type="number" min="0.01" max="99999" step="0.01" required></label>
+                    <button disabled class="loja-acao loja-acao-principal">Publicar promoção</button>
+                    <p role="status"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!--
+         FOOTER 
+        Obs: Mudar as logos dos apps "Whatsapp, Instagram, Facebook"
+    -->
+    <footer class="site-footer">
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <div class="logo-group">
+                    <img class="hashi-header" src="../Img-pagina-inicial/Logo-Site.png" alt="Logo Hashi">
+                    <img class="hashi-header-logo" src="../Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+                </div>
+                <p class="footer-tagline">Sabor, tradição e excelência da culinária japonesa, direto na porta da sua casa.</p>
+
+                <div class="footer-social">
+                    <a aria-disabled="true" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a aria-disabled="true" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 9h2.5V6H14c-2 0-3.5 1.6-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.6c0-.4.3-.6.5-.6Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a aria-disabled="true" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8.5 8.7c.2-.4.6-.4.9-.4h.6c.2 0 .5 0 .7.5.2.6.7 1.8.8 2 .1.2.1.4 0 .6-.1.3-.2.4-.4.6-.2.2-.4.4-.2.7.6 1 1.6 2 3 2.5.3.1.4 0 .6-.2.2-.2.7-.8 1-1 .2-.2.4-.2.6-.1.3.1 1.7.8 2 .9.3.1.5.2.5.4 0 .2 0 1-.4 1.5-.4.6-1.8 1-2.4 1-1.4.1-2.9-.5-4.6-1.9-2.1-1.6-3.3-3.6-3.5-4-.2-.4-1.3-2-1.1-3.7.1-.7.6-1.2.8-1.4Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a data-inicio-hashi href="index-loja.html">Início</a>
+                <a href="cardapios-loja.html">Cardápios</a>
+                <a href="promocoes-loja.html">Promoções</a>
+                <a href="atendimento-loja.html">Ajuda</a>
+                <a href="../index.html#cadastro-entregador">Seja um entregador</a>
+            </div>
+
+            <div class="footer-links" id="atendimento">
+                <h4>Atendimento</h4>
+                <a href="atendimento-loja.html">Fale conosco</a>
+                <a aria-disabled="true">Perguntas frequentes</a>
+                <a aria-disabled="true">Trocas e devoluções</a>
+                <a aria-disabled="true">Política de privacidade</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Atendemos em todo Brasil</p>
+                <p>(34) 99898-9966</p>
+                <p>contato@hashi.com.br</p>
+                <p class="footer-hours">24 horas por dia com entregadores <br> ao seu dispor</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Hashi. Todos os direitos reservados.</p>
+            <p>Feito com <span class="footer-heart">♥</span> e muito wasabi.</p>
+        </div>
+    </footer>
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/perfil.js"></script>
+</body>
+</html>

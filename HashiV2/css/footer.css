@@ -1,0 +1,117 @@
+.site-footer {
+    border-top: 1px solid var(--hashi-superficie-elevada);
+    padding: 60px 60px 0;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: space-between;
+    padding-bottom: 48px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    flex: 1.4;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: var(--hashi-texto-secundario);
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 50%;
+    color: var(--hashi-texto-suave);
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.footer-social a[href]:is(:hover, :focus-visible) {
+    border-color: var(--hashi-vermelho);
+    color: var(--hashi-vermelho);
+}
+
+.footer-social :is(svg, svg *) {
+    color: inherit;
+}
+
+.footer-social svg {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--hashi-texto);
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: var(--hashi-texto-secundario);
+    transition: color 0.15s ease;
+}
+
+.footer-links a[href]:is(:hover, :focus-visible) {
+    color: var(--hashi-vermelho);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 220px;
+    font-size: 14px;
+    color: var(--hashi-texto-secundario);
+}
+
+.footer-hours {
+    color: var(--hashi-texto);
+    margin-top: 4px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid var(--hashi-superficie-rodape);
+    font-size: 13px;
+    color: var(--hashi-texto-discreto);
+}
+
+.footer-heart {
+    color: var(--hashi-vermelho);
+}
+

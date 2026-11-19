@@ -1,0 +1,491 @@
+
+.painel-admin {
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: var(--margem-pagina);
+}
+
+.painel-admin h1 {
+    margin-bottom: 20px;
+    font-size: clamp(26px, 4vw, 42px);
+}
+
+.admin-resumo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.admin-resumo > div {
+    padding: clamp(10px, 2vw, 20px);
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 12px;
+    background: var(--hashi-superficie);
+}
+
+.admin-resumo dt,
+.admin-identidade span {
+    color: var(--hashi-texto-secundario);
+    font-size: 14px;
+}
+
+.admin-resumo dd {
+    margin-top: 7px;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+}
+
+.admin-filtros {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) repeat(2, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.admin-filtros label,
+.admin-identidade {
+    display: grid;
+    min-width: 0;
+    gap: 6px;
+}
+
+.admin-filtros :is(input, select) {
+    min-width: 0;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+    color-scheme: dark;
+    font: inherit;
+}
+
+.admin-lista {
+    display: grid;
+    gap: 8px;
+    list-style: none;
+}
+
+.admin-parceiro {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(100px, 1fr) minmax(90px, 1fr) minmax(142px, auto);
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 9px;
+    background: var(--hashi-superficie);
+    overflow-wrap: anywhere;
+}
+
+.admin-status {
+    justify-self: start;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #213128;
+    color: #b8dec5;
+    font-size: 13px;
+}
+
+.admin-status[data-status="bloqueado"] {
+    background: var(--hashi-superficie-quente-hover);
+    color: var(--hashi-aviso);
+}
+
+.admin-parceiro button {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.admin-vazio,
+#aviso-admin:not(:empty) {
+    margin-bottom: 10px;
+    color: var(--hashi-texto-secundario);
+}
+
+@media (max-width: 670px) {
+    .admin-filtros {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-parceiro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-identidade {
+        grid-column: 1 / -1;
+    }
+
+    .admin-parceiro button {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+}
+
+
+.admin-explicacao {
+    margin: 8px 0;
+    color: var(--hashi-texto-secundario);
+}
+
+.admin-promocao {
+    margin-top: 10px;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 10px;
+    background: var(--hashi-superficie);
+}
+
+.admin-promocao {
+    padding: 16px;
+    overflow-wrap: anywhere;
+}
+
+.admin-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 12px;
+}
+
+.admin-acoes button {
+    cursor: pointer;
+}
+
+.admin-promocoes {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.admin-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.admin-form label {
+    display: grid;
+    gap: 5px;
+}
+
+.admin-form :is(input, select, textarea) {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+    color-scheme: dark;
+    font: inherit;
+}
+
+.painel-admin button[hidden] {
+    display: none;
+}
+
+.painel-admin p[role="status"]:not(:empty) {
+    margin-block: 12px;
+    color: var(--hashi-texto-secundario);
+}
+
+@media (max-width: 720px) {
+    .admin-promocoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.admin-catalogo-topo,
+.admin-paginacao,
+.admin-paginacao > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-catalogo-topo,
+.admin-paginacao {
+    justify-content: space-between;
+}
+
+.admin-catalogo-topo {
+    margin-bottom: 20px;
+}
+
+.admin-catalogo-topo h1 {
+    margin: 0;
+}
+
+.admin-catalogo .admin-filtros {
+    margin-top: 0;
+}
+
+.admin-tabela-area {
+    overflow: auto;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 10px;
+}
+
+.admin-tabela {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-tabela :is(th, td) {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--hashi-contorno);
+}
+
+.admin-tabela thead {
+    background: var(--hashi-superficie);
+}
+
+.admin-tabela thead th {
+    color: var(--hashi-texto-secundario);
+    font-size: 13px;
+}
+
+.admin-tabela tbody tr:hover {
+    background: var(--hashi-superficie-quente);
+}
+
+.admin-tabela tbody tr:last-child > * {
+    border-bottom: 0;
+}
+
+.admin-produto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-produto img,
+.admin-inspecao-topo img {
+    flex: none;
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+    object-fit: contain;
+}
+
+.admin-coluna-loja,
+.admin-paginacao p,
+#admin-sem-produtos {
+    color: var(--hashi-texto-secundario);
+}
+
+.admin-preco {
+    white-space: nowrap;
+}
+
+.admin-paginacao,
+#admin-sem-produtos {
+    margin-top: 14px;
+}
+
+.admin-catalogo button:not(:disabled) {
+    cursor: pointer;
+}
+
+.admin-paginacao button:disabled {
+    opacity: .4;
+}
+
+.admin-dialogo {
+    width: min(620px, calc(100% - 24px));
+    max-height: calc(100dvh - 24px);
+    margin: auto;
+    padding: clamp(16px, 4vw, 28px);
+    overflow: auto;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 16px;
+    background: var(--hashi-fundo);
+    color: var(--hashi-texto);
+    overflow-wrap: anywhere;
+}
+
+.admin-dialogo::backdrop {
+    background: rgb(0 0 0 / 72%);
+}
+
+.admin-dialogo .admin-fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    min-height: 40px;
+    justify-content: center;
+    padding: 0;
+    font-size: 23px;
+}
+
+.admin-inspecao-topo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-right: 40px;
+}
+
+.admin-inspecao-topo p,
+.admin-inspecao-dados dt,
+.admin-inspecao-acoes p {
+    margin: 6px 0;
+    color: var(--hashi-texto-secundario);
+    font-size: 14px;
+}
+
+.admin-inspecao-dados,
+.admin-inspecao-acoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.admin-inspecao-acoes section {
+    padding: 12px;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+}
+
+.admin-inspecao-acoes button {
+    margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+    .admin-inspecao-dados,
+    .admin-inspecao-acoes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+.admin-escolhas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr));
+    gap: 12px;
+    margin: 16px 0 24px;
+}
+.admin-escolhas a {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+    background: var(--hashi-superficie);
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 12px;
+}
+.admin-escolhas a:hover, .admin-escolhas a:focus-visible {
+    border-color: var(--hashi-vermelho);
+}
+.admin-escolhas span, .admin-grupo-topo, .admin-ficha summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.admin-escolhas span, .admin-ficha p {
+    color: var(--hashi-texto-secundario);
+}
+.admin-escolhas b, .admin-grupo-topo a:hover {
+    color: var(--hashi-vermelho);
+}
+.admin-grupo:not(:target) {
+    display: none;
+}
+.admin-grupo-topo {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.admin-grupo-topo a {
+    text-decoration: underline;
+}
+.admin-ficha {
+    border-top: 1px solid var(--hashi-contorno);
+}
+.admin-ficha summary {
+    justify-content: flex-start;
+    padding-block: 14px;
+    cursor: pointer;
+}
+.admin-ficha summary::after {
+    content: "+";
+    margin-left: auto;
+    color: var(--hashi-texto-secundario);
+}
+.admin-ficha[open] summary::after {
+    content: "−";
+}
+.admin-ficha summary:hover strong {
+    color: var(--hashi-vermelho);
+}
+.admin-ficha .admin-acoes {
+    margin: 12px 0 16px;
+}
+
+#novo-aviso:not(:target),
+#novo-aviso:target + #entrada {
+    display: none;
+}
+#novo-aviso .admin-form {
+    max-width: 680px;
+}
+.mensagem-admin {
+    margin-top: 12px;
+    border-top: 1px solid var(--hashi-contorno);
+}
+.mensagem-admin > summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0 2px;
+    cursor: pointer;
+}
+.mensagem-admin small {
+    display: block;
+    margin-top: 5px;
+}
+.mensagem-admin :is(small, time) {
+    color: var(--hashi-texto-secundario);
+}
+.mensagem-corpo {
+    margin-top: 12px;
+    padding: 16px;
+    background: var(--hashi-superficie);
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+.mensagem-corpo details {
+    margin-top: 16px;
+}
+.mensagem-corpo summary {
+    width: fit-content;
+    cursor: pointer;
+}
+.mensagem-admin summary:hover strong, .mensagem-corpo summary:hover {
+    color: var(--hashi-vermelho);
+}
+.mensagem-admin button, #novo-aviso button {
+    justify-self: start;
+}
+
+.admin-busca-grupo {
+    display: grid;
+    gap: 6px;
+    max-width: 28rem;
+    margin-block: 12px;
+}
+.admin-busca-grupo input {
+    min-width: 0;
+    padding: 10px 12px;
+    background: var(--hashi-superficie);
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    color: var(--hashi-texto);
+    font: inherit;
+}
+.admin-grupo [data-resultado-busca]:empty {
+    display: none;
+}

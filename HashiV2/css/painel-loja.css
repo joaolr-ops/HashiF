@@ -1,0 +1,157 @@
+.painel-loja,
+.loja-acesso {
+    margin: 0 var(--margem-pagina);
+}
+
+.painel-loja {
+    padding: clamp(24px, 4vw, 52px) 0 clamp(32px, 5vw, 64px);
+}
+
+.loja-cabecalho,
+.loja-bloco,
+.loja-acesso {
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 14px;
+    background: var(--hashi-fundo);
+}
+
+.loja-cabecalho,
+.loja-acesso {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: clamp(18px, 2.6vw, 30px);
+    border-left: 3px solid var(--hashi-vermelho);
+}
+
+.loja-acesso {
+    margin-bottom: 48px;
+}
+
+.loja-identidade {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.loja-identidade img {
+    flex: none;
+    object-fit: contain;
+    padding: 7px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 50%;
+}
+
+.loja-identidade h1 {
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+.loja-identidade p {
+    margin-top: 4px;
+    color: var(--hashi-texto-secundario);
+    overflow-wrap: anywhere;
+}
+
+.loja-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(235px, 28%);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.loja-bloco {
+    padding: clamp(16px, 2vw, 24px);
+}
+
+.loja-bloco h2,
+.loja-acesso h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 21px;
+}
+
+.loja-pedidos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.loja-pedidos h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.loja-contagem {
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--hashi-superficie-quente-hover);
+    color: var(--hashi-texto);
+    font-size: 13px;
+}
+
+.loja-atalhos {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+}
+
+.loja-atalhos h2 {
+    margin-bottom: 6px;
+}
+
+.loja-acao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.loja-acao:not(:disabled):hover {
+    border-color: var(--hashi-vermelho);
+    background: var(--hashi-superficie-quente-hover);
+}
+
+.loja-acao:focus-visible {
+    outline: 2px solid var(--hashi-foco);
+    outline-offset: 3px;
+}
+
+.loja-acao-principal {
+    border-color: var(--hashi-vermelho);
+    background: var(--hashi-vermelho);
+}
+
+.loja-acao-principal:not(:disabled):hover {
+    background: var(--hashi-vermelho-escuro);
+}
+
+.loja-atalhos .painel-sair {
+    justify-self: start;
+    margin-top: 6px;
+    min-height: 44px;
+}
+
+@media (max-width: 970px) {
+    .loja-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .loja-pedidos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1,0 +1,133 @@
+
+.loja-vitrine-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 34%);
+    overflow: hidden;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 16px;
+    background: var(--hashi-superficie);
+}
+
+.loja-vitrine-identidade {
+    padding: clamp(20px, 4vw, 40px);
+    align-self: center;
+}
+
+.loja-vitrine-topo > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
+    background: var(--hashi-fundo);
+}
+
+.loja-vitrine-regiao,
+.loja-vitrine-info span,
+.loja-vitrine-cupom p {
+    color: var(--hashi-texto-secundario);
+}
+
+.loja-vitrine-regiao {
+    margin-top: 8px;
+}
+
+.loja-vitrine-info,
+.loja-vitrine-atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.loja-vitrine-info {
+    margin-top: 18px;
+    list-style: none;
+}
+
+.loja-vitrine-info li,
+.loja-vitrine-atalhos a {
+    padding: 8px 12px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    background: var(--hashi-fundo);
+    font-size: 14px;
+}
+
+.loja-vitrine-info .loja-vitrine-estrela {
+    margin-right: 4px;
+    color: #ffbe55;
+}
+
+.loja-vitrine-atalhos {
+    margin: 16px 0 24px;
+}
+
+.loja-vitrine-atalhos a:hover {
+    border-color: var(--hashi-vermelho);
+}
+
+.loja-vitrine-cupom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+    padding: clamp(14px, 3vw, 22px);
+    border: 1px solid var(--hashi-contorno-vermelho);
+    border-radius: 12px;
+    background: var(--hashi-superficie-quente);
+}
+
+.loja-vitrine-cupom h2 {
+    font-size: 18px;
+}
+
+.loja-vitrine-cupom p {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.loja-vitrine-codigo {
+    padding: 8px 12px;
+    border: 1px dashed var(--hashi-vermelho);
+    border-radius: 7px;
+    color: var(--hashi-aviso);
+    font-weight: 700;
+}
+
+.loja-vitrine-cupom a {
+    margin-left: auto;
+}
+
+.loja-vitrine-destaques {
+    margin-top: 28px;
+}
+
+.loja-vitrine-destaques h2 {
+    margin-bottom: 12px;
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+.loja-vitrine-pagina [id] {
+    scroll-margin-top: 16px;
+}
+
+.loja-vitrine-pagina .menu-card:target {
+    border-color: var(--hashi-vermelho);
+}
+
+@media (max-width: 680px) {
+    .loja-vitrine-topo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .loja-vitrine-topo > img {
+        height: clamp(138px, 41vw, 220px);
+        min-height: 0;
+        grid-row: 1;
+    }
+
+    .loja-vitrine-cupom a {
+        margin-left: 0;
+    }
+}
+

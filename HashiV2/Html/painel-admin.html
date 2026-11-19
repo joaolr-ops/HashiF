@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashi</title>
+    <link rel="icon" href="../Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/painel-loja.css">
+    <link rel="stylesheet" href="../css/painel-admin.css">
+</head>
+<body data-painel-perfil="admin">
+    <header>
+        <a class="logo-group" href="painel-admin.html" aria-label="Painel do Hashi">
+            <img class="hashi-header" src="../Img-pagina-inicial/Logo-Site.png" alt="">
+            <img class="hashi-header-logo" src="../Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+        </a>
+        <nav class="nav-links" aria-label="Administração">
+            <a href="painel-admin.html" aria-current="page">Contas</a>
+            <a href="cardapio-admin.html">Cardápio</a>
+            <a href="promocoes-admin.html">Promoções</a>
+            <a href="atendimento-admin.html">Mensagens</a>
+            <a href="index-admin.html">Ver site</a>
+        </nav>
+        <div class="header-actions">
+            <a class="pesquisa-atalho" href="pesquisa-admin.html" aria-label="Pesquisar lojas e itens">
+                <svg class="lupa" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.5"/>
+                    <path d="m15.5 15.5 6 6"/>
+                </svg>
+            </a>
+            <a class="loja-acao" href="../index.html" data-encerrar-login>Sair da conta</a>
+        </div>
+    </header>
+    <div class="header-divider" aria-hidden="true"></div>
+
+    <main class="painel-loja painel-admin" id="grupos">
+        <h1>Contas de parceiros</h1>
+        <nav class="admin-escolhas" aria-label="Escolher grupo">
+            <a href="#lojas"><strong>Lojas</strong><span>1 conta <b aria-hidden="true">›</b></span></a>
+            <a href="#entregadores"><strong>Entregadores</strong><span>1 conta <b aria-hidden="true">›</b></span></a>
+            <a href="#bloqueados"><strong>Acessos bloqueados</strong><span>0 contas <b aria-hidden="true">›</b></span></a>
+        </nav>
+        <section class="loja-bloco admin-grupo" id="lojas" aria-labelledby="titulo-lojas">
+            <div class="admin-grupo-topo"><h2 id="titulo-lojas">Lojas</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Lojas
+                <input type="search" placeholder="Nome ou e-mail">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><strong>Sushi Show</strong><span class="admin-status">Ativo</span></summary>
+                <p data-email>loja@hashi.com</p>
+                <div class="admin-acoes"><a class="loja-acao" href="cardapio-admin.html">Inspecionar cardápio</a><button class="loja-acao" disabled>Bloquear acesso</button></div>
+            </details>
+        </section>
+        <section class="loja-bloco admin-grupo" id="entregadores" aria-labelledby="titulo-entregadores">
+            <div class="admin-grupo-topo"><h2 id="titulo-entregadores">Entregadores</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Entregadores
+                <input type="search" placeholder="Nome ou e-mail">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><strong>Entregador</strong><span class="admin-status">Ativo</span></summary>
+                <p data-email>entregador@hashi.com</p>
+                <div class="admin-acoes"><button class="loja-acao" disabled>Bloquear acesso</button></div>
+            </details>
+        </section>
+        <section class="loja-bloco admin-grupo" id="bloqueados" aria-labelledby="titulo-bloqueados">
+            <div class="admin-grupo-topo"><h2 id="titulo-bloqueados">Acessos bloqueados</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Acessos bloqueados
+                <input type="search" placeholder="Nome ou e-mail">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <p data-grupo-vazio>Nenhuma conta bloqueada.</p>
+        </section>
+    </main>
+
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/perfil.js"></script>
+    <script src="../JavaScript/busca-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.apresentacao-perfis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.login .apresentacao-perfis {
+    justify-content: center;
+    margin-inline: 10px;
+}
+
+.apresentacao-perfis a,
+.apresentacao-sair {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid var(--hashi-contorno-forte);
+    border-radius: 8px;
+    background: var(--hashi-superficie);
+    font-size: 14px;
+}
+
+.apresentacao-perfis a:hover,
+.apresentacao-sair:hover,
+a.selecao-card:hover {
+    border-color: var(--hashi-vermelho);
+}
+
+button:disabled,
+a[aria-disabled="true"] {
+    cursor: default;
+}
+
+button:disabled {
+    opacity: .65;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--hashi-foco);
+    outline-offset: 3px;
+}
+
+:is(#flex-login, #cadastro-cliente, #cadastro-entregador):target {
+    display: flex;
+    z-index: 20;
+    padding: 12px;
+}
+
+#flex-login .login {
+    position: relative;
+    width: min(450px, 100%);
+    height: auto;
+    max-height: calc(100dvh - 24px);
+    padding-bottom: 24px;
+    overflow: auto;
+    background: var(--hashi-fundo);
+}
+
+:is(#tela-selecao, #recuperar-senha, #cadastro-loja, #dialogo-cartao):target {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    margin: auto;
+    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 72%);
+}
+
+body:has(:is(#flex-login, #tela-selecao, #recuperar-senha, #cadastro-cliente,
+    #cadastro-entregador, #cadastro-loja, #dialogo-cartao):target) {
+    overflow: hidden;
+}
+
+:is(.selecao-fechar, .recuperar-fechar, .conta-fechar) {
+    display: grid;
+    place-items: center;
+}
+
+:is(.btn-cadastrar, .btn-cadastrar2):disabled {
+    width: calc(100% - 2 * var(--margem-campos, 24px));
+}
+
+.conta-conteudo [data-painel]:not(#dados):not(:target) {
+    display: none;
+}
+
+.conta-conteudo:has(:is(#pagamento, #enderecos, #configuracoes, #dialogo-cartao):target) #dados {
+    display: none;
+}
+
+.conta-conteudo:has(#dialogo-cartao:target) #pagamento {
+    display: block;
+}
+
+a.conta-salvar,
+a.conta-secundario {
+    display: inline-block;
+}
+
+[data-destaques] :is(.menu-banner-controles, .promo-carrossel-controles, [data-anterior],
+    [data-proximo], [data-rotacao], [data-ir-slide]) {
+    display: none;
+}

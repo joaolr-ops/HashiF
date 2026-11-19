@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--hashi-texto);
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.fundo-login{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(11, 11, 11, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    width: 450px;
+    height: 550px;
+    background-color: rgba(11, 11, 11, 0.2);
+    border-radius: 30px;
+    border: 1px solid var(--hashi-cinza-campo);
+}
+
+.Bem-vindo{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    margin-top: 3px;
+}
+
+
+.logo-login{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.Email{
+    display: flex;
+    flex-direction: column;
+    margin: 25px 75px 0px;
+}
+
+.Email label{
+    font-size: 16px;
+}
+
+.Email input{
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgba(138, 138, 138, 0.1);
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.Email input:focus{
+    border: 1px solid var(--hashi-cinza-campo);
+}
+
+.Email input::placeholder{
+    font-size: 16px;
+}
+
+.Senha{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 75px 0px;
+}
+
+.Senha label{
+    font-size: 16px;
+}
+
+.Senha input{
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgba(138, 138, 138, 0.1);
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.Senha input:focus{
+    border: 1px solid var(--hashi-cinza-campo);
+}
+
+.Senha input::placeholder{
+    font-size: 16px;
+}
+
+.Entrar-Button{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-left: 40px;
+    font-size: 18px;
+    margin-top: 44px;
+    background-color: rgba(22, 22, 22, 0.6);
+    width: 370px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.Entrar-Button:hover{
+    background-color: rgba(225, 6, 0, 0.5);
+}
+
+.Senha-Esq{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    color: var(--hashi-vermelho);
+}
+
+.Senha-Esq:hover{
+    color: rgba(225, 6, 0, 0.7);
+}
+
+.Nao-tem-uma-conta{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.Nao-tem-uma-conta a{
+    color: var(--hashi-vermelho);
+}
+
+.Nao-tem-uma-conta a:hover{
+    color: rgba(225, 6, 0, 0.7);
+}
+
+.recuperar-senha {
+    position: fixed;
+    inset: 0;
+    width: min(440px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 28px clamp(20px, 6vw, 38px);
+    overflow-y: auto;
+    color-scheme: dark;
+    background: var(--hashi-fundo);
+    border: 1px solid var(--hashi-vermelho-escuro);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.recuperar-senha::backdrop {
+    background: rgb(0 0 0 / 70%);
+}
+
+.recuperar-logo {
+    display: block;
+    width: 106px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+.recuperar-senha h2 {
+    font-size: clamp(22px, 6vw, 28px);
+}
+
+#recuperar-descricao {
+    margin-top: 9px;
+    color: var(--hashi-texto-secundario);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.recuperar-form {
+    display: grid;
+    gap: 9px;
+    margin-top: 24px;
+    text-align: left;
+}
+
+.recuperar-form label {
+    font-size: 14px;
+}
+
+.recuperar-form input {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+    border: 1px solid var(--hashi-contorno);
+    border-radius: 9px;
+    background: var(--hashi-superficie);
+    font-size: 16px;
+}
+
+.recuperar-senha button {
+    cursor: pointer;
+}
+
+.recuperar-senha :is(button, input):focus-visible {
+    outline: 2px solid var(--hashi-vermelho);
+    outline-offset: 3px;
+}
+
+.recuperar-enviar {
+    min-height: 46px;
+    margin-top: 7px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: var(--hashi-vermelho);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.recuperar-enviar:not(:disabled):hover {
+    background: var(--hashi-vermelho-hover);
+}
+
+.recuperar-status:not(:empty) {
+    color: var(--hashi-aviso);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.recuperar-fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--hashi-texto-secundario);
+    font-size: 25px;
+}
+
+.recuperar-voltar {
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--hashi-vermelho);
+    font-size: 14px;
+}
+
+.recuperar-fechar:hover,
+.recuperar-voltar:hover {
+    background: color-mix(in srgb, var(--hashi-texto) 5%, transparent);
+}
+
+#form-login .Entrar-Button {
+    width: calc(100% - 48px);
+    max-width: 370px;
+    margin: 24px auto 0;
+    background: var(--hashi-vermelho);
+    cursor: pointer;
+}
+
+#form-login .Entrar-Button:hover {
+    background: var(--hashi-vermelho-hover);
+}
+
+#form-login .Entrar-Button:focus-visible {
+    outline: 2px solid var(--hashi-foco);
+    outline-offset: 3px;
+}
+
+#aviso-login:not(:empty) {
+    margin: 10px 24px;
+    color: var(--hashi-aviso);
+    text-align: center;
+}
+
+
+#form-login :is(.Email, .Senha) {
+    width: min(300px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+#form-login :is(.Email, .Senha) input {
+    width: 100%;
+}
+
+.campo-senha-visual {
+    position: relative;
+    min-width: 0;
+}
+
+.cadastro-loja .campo-senha-visual {
+    order: 1;
+    flex: 1;
+}
+
+:is(.campo-senha-visual, .campo-senha-wrapper, .campo-senha-wrapper2):has(.visualizar-senha:not([hidden])) input {
+    padding-right: 78px;
+}
+
+.visualizar-senha:not([hidden]) {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 36px;
+    padding: 0 7px;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--hashi-texto-secundario);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.visualizar-senha:hover {
+    color: var(--hashi-texto);
+}
+
+.visualizar-senha:focus-visible {
+    outline: 2px solid var(--hashi-foco);
+    outline-offset: 1px;
+}
+
+
+#form-login .campo-senha-visual:has(.visualizar-senha-icone:not([hidden])) input {
+    padding-right: 48px;
+}
+
+.visualizar-senha-icone:not([hidden]) {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    padding: 0;
+}
+
+.visualizar-senha-icone svg {
+    width: 20px;
+    height: 20px;
+}
+
+.visualizar-senha-icone .senha-icone-risco {
+    display: none;
+}
+
+#senha[type="text"] + .visualizar-senha-icone .senha-icone-risco {
+    display: block;
+}
+

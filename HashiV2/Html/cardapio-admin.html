@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashi</title>
+    <link rel="icon" href="../Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/painel-loja.css">
+    <link rel="stylesheet" href="../css/painel-admin.css">
+</head>
+<body data-painel-perfil="admin">
+    <header>
+        <a class="logo-group" href="painel-admin.html" aria-label="Painel do Hashi">
+            <img class="hashi-header" src="../Img-pagina-inicial/Logo-Site.png" alt="">
+            <img class="hashi-header-logo" src="../Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+        </a>
+        <nav class="nav-links" aria-label="Administração">
+            <a href="painel-admin.html">Contas</a>
+            <a href="cardapio-admin.html" aria-current="page">Cardápio</a>
+            <a href="promocoes-admin.html">Promoções</a>
+            <a href="atendimento-admin.html">Mensagens</a>
+            <a href="index-admin.html">Ver site</a>
+        </nav>
+        <div class="header-actions">
+            <a class="pesquisa-atalho" href="pesquisa-admin.html" aria-label="Pesquisar lojas e itens">
+                <svg class="lupa" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.5"/>
+                    <path d="m15.5 15.5 6 6"/>
+                </svg>
+            </a>
+            <a class="loja-acao" href="../index.html" data-encerrar-login>Sair da conta</a>
+        </div>
+    </header>
+    <div class="header-divider" aria-hidden="true"></div>
+
+    <main class="painel-loja painel-admin" id="grupos">
+        <div class="admin-catalogo-topo"><h1>Cardápio das lojas</h1><a class="loja-acao" href="painel-admin.html#lojas">Gerenciar lojas</a></div>
+        <h2 id="catalogo-admin">Sushi Show</h2>
+        <nav class="admin-escolhas" aria-label="Escolher grupo">
+            <a href="#combos"><strong>Combos</strong><span>2 itens <b aria-hidden="true">›</b></span></a>
+            <a href="#sushis"><strong>Sushis e hot rolls</strong><span>3 itens <b aria-hidden="true">›</b></span></a>
+            <a href="#temakis"><strong>Temakis</strong><span>1 item <b aria-hidden="true">›</b></span></a>
+            <a href="#sobremesas"><strong>Sobremesas</strong><span>1 item <b aria-hidden="true">›</b></span></a>
+        </nav>
+        <section class="loja-bloco admin-grupo" id="combos" aria-labelledby="titulo-combos">
+            <div class="admin-grupo-topo"><h2 id="titulo-combos">Combos</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Combos
+                <input type="search" placeholder="Nome do item">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Prato-Sushi-principal.png" alt="" width="40" height="40" loading="lazy"><strong>Combo especial</strong></span><span>R$ 99,99</span></summary>
+                <p>30 peças variadas · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Combo clássico</strong></span><span>R$ 69,90</span></summary>
+                <p>20 peças selecionadas · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+        </section>
+        <section class="loja-bloco admin-grupo" id="sushis" aria-labelledby="titulo-sushis">
+            <div class="admin-grupo-topo"><h2 id="titulo-sushis">Sushis e hot rolls</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Sushis e hot rolls
+                <input type="search" placeholder="Nome do item">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Sushi de salmão</strong></span><span>R$ 34,90</span></summary>
+                <p>8 peças de salmão · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Hot roll crocante</strong></span><span>R$ 32,90</span></summary>
+                <p>10 peças com cream cheese · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Uramaki Philadelphia</strong></span><span>R$ 29,90</span></summary>
+                <p>8 peças com salmão e cream cheese · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+        </section>
+        <section class="loja-bloco admin-grupo" id="temakis" aria-labelledby="titulo-temakis">
+            <div class="admin-grupo-topo"><h2 id="titulo-temakis">Temakis</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Temakis
+                <input type="search" placeholder="Nome do item">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Temaki de salmão</strong></span><span>R$ 36,90</span></summary>
+                <p>Salmão, arroz e cebolinha · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+        </section>
+        <section class="loja-bloco admin-grupo" id="sobremesas" aria-labelledby="titulo-sobremesas">
+            <div class="admin-grupo-topo"><h2 id="titulo-sobremesas">Sobremesas</h2><a href="#grupos">Voltar aos grupos</a></div>
+            <label class="admin-busca-grupo">Pesquisar em Sobremesas
+                <input type="search" placeholder="Nome do item">
+            </label>
+            <p class="admin-explicacao" role="status" data-resultado-busca></p>
+            <details class="admin-ficha">
+                <summary><span class="admin-produto"><img src="../Img-pagina-inicial/Mini-sushi.png" alt="" width="40" height="40" loading="lazy"><strong>Mochi de morango</strong></span><span>R$ 18,90</span></summary>
+                <p>2 unidades · Visível no cardápio</p>
+                <div class="admin-acoes"><a class="loja-acao" href="sushi-show-admin.html">Ver Sushi Show</a><button class="loja-acao" disabled>Bloquear item</button><button class="loja-acao" disabled>Bloquear loja</button></div>
+            </details>
+        </section>
+    </main>
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/perfil.js"></script>
+    <script src="../JavaScript/busca-admin.js"></script>
+</body>
+</html>

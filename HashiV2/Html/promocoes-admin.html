@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashi</title>
+    <link rel="icon" href="../Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/painel-loja.css">
+    <link rel="stylesheet" href="../css/painel-admin.css">
+</head>
+<body data-painel-perfil="admin">
+    <header>
+        <a class="logo-group" href="painel-admin.html" aria-label="Painel do Hashi">
+            <img class="hashi-header" src="../Img-pagina-inicial/Logo-Site.png" alt="">
+            <img class="hashi-header-logo" src="../Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+        </a>
+        <nav class="nav-links" aria-label="Administração">
+            <a href="painel-admin.html">Contas</a>
+            <a href="cardapio-admin.html">Cardápio</a>
+            <a href="promocoes-admin.html" aria-current="page">Promoções</a>
+            <a href="atendimento-admin.html">Mensagens</a>
+            <a href="index-admin.html">Ver site</a>
+        </nav>
+        <div class="header-actions">
+            <a class="pesquisa-atalho" href="pesquisa-admin.html" aria-label="Pesquisar lojas e itens">
+                <svg class="lupa" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.5"/>
+                    <path d="m15.5 15.5 6 6"/>
+                </svg>
+            </a>
+            <a class="loja-acao" href="../index.html" data-encerrar-login>Sair da conta</a>
+        </div>
+    </header>
+    <div class="header-divider" aria-hidden="true"></div>
+
+    <main class="painel-loja painel-admin">
+        <h1>Gerenciar promoções</h1>
+        <div class="admin-promocoes">
+            <section class="loja-bloco" aria-labelledby="titulo-form-promocao">
+                <h2 id="titulo-form-promocao">Nova promoção</h2>
+                <form id="form-admin-promocao" class="admin-form"><button type="submit" hidden disabled></button>
+                    <label>Tipo de promoção
+                        <select name="tipo"><option value="semana">Da semana</option><option value="entrega">De entrega</option></select>
+                    </label>
+                    <label>Título <input name="titulo" maxlength="80" required></label>
+                    <label>Condições <textarea name="descricao" rows="4" maxlength="240" required></textarea></label>
+                    <div class="admin-acoes">
+                        <button class="loja-acao loja-acao-principal" type="submit" disabled>Publicar</button>
+
+                    </div>
+                </form>
+                <p id="aviso-promocoes-admin" role="status"></p>
+            </section>
+            <section class="loja-bloco" aria-labelledby="titulo-lista-promocoes">
+                <h2 id="titulo-lista-promocoes">Promoções do Hashi</h2>
+                <div class="admin-lista-promocoes">
+                    <article class="admin-promocao"><h3>Segunda do sushi</h3><p class="admin-explicacao">Da semana</p><p>20% de desconto em combos de sushi.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                    <article class="admin-promocao"><h3>Terça do hot roll</h3><p class="admin-explicacao">Da semana</p><p>15% de desconto em hot rolls selecionados.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                    <article class="admin-promocao"><h3>Quarta do combo</h3><p class="admin-explicacao">Da semana</p><p>10% de desconto em combos família.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                    <article class="admin-promocao"><h3>Quinta da sobremesa</h3><p class="admin-explicacao">Da semana</p><p>Descontos em sobremesas selecionadas.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                    <article class="admin-promocao"><h3>Sexta da entrega</h3><p class="admin-explicacao">Da semana</p><p>Frete grátis em compras a partir de R$ 99,90.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                    <article class="admin-promocao"><h3>Frete grátis</h3><p class="admin-explicacao">De entrega</p><p>A partir de R$ 99,90.</p><div class="admin-acoes"><button class="loja-acao" type="button" disabled>Editar</button><button class="loja-acao" type="button" disabled>Pausar</button></div></article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/perfil.js"></script>
+</body>
+</html>

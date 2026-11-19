@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro-cliente.css">
+    <link rel="stylesheet" href="./css/cadastro-entregador.css">
+    <link rel="stylesheet" href="./css/tela-selecao.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
+    <title>Hashi</title>
+    <link rel="stylesheet" href="./css/apresentacao.css">
+</head>
+<body data-inicio-publico>
+    <header>
+        <div class="logo-group">
+            <img class="hashi-header" src="./Img-pagina-inicial/Logo-Site.png" alt="Logo Hashi na cor branca">
+            <img class="hashi-header-logo" src="./Img-pagina-inicial/Logo-hashi.png" alt="Logo Hashi na cor branca versão escrita">
+        </div>
+
+        <nav class="nav-links">
+            <a href="#inicio" aria-current="page">Início</a>
+            <a class="cardapios" href="./Html/cardapios.html">Cardápios</a>
+            <a class="promocoes" href="./Html/promocoes.html">Promoções</a>
+            <a class="ajuda" href="Html/atendimento.html">Ajuda</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="pesquisa-atalho" href="Html/pesquisa.html" aria-label="Pesquisar lojas e itens">
+                <svg class="lupa" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="7.5"/>
+                    <path d="m15.5 15.5 6 6"/>
+                </svg>
+            </a>
+
+
+            <a class="conta-buttom" href="#flex-login" id="abrir-login">
+                <svg class="conta-icon" viewBox="3 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M5 19c1.2-3.2 4-5 7-5s5.8 1.8 7 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                Minha conta
+            </a>
+
+
+            <a class="cart-icon-wrapper" id="carrinho" href="./Html/carrinho.html" aria-label="Carrinho">
+                <img class="cart-icon" src="./Img-pagina-inicial/Carrinho-icon2.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- Divisor separado do header -->
+    <div class="header-divider" role="presentation"></div>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-text">
+                <span class="badge">Sabor <span class="dot">•</span> Tradição <span class="dot">•</span> Excelência</span>
+
+                <h1>O <span class="highlight">melhor</span> da culinária japonesa na porta da sua casa</h1>
+
+                <p class="hero-subtitle">Sabor, qualidade tradição japonesa <br> com praticidade que você merece</p>
+
+                <div class="hero-buttons">
+                    <a href="./Html/cardapios.html#vitrine" class="btn btn-primary">
+                        <img src="./Img-pagina-inicial/Sacolinha-icon.png" alt="">
+                        Pedir agora
+                        <span class="chevron-primario chevron-btn">›</span>
+                    </a>
+                    <a href="./Html/cardapios.html" class="btn btn-secondary">
+                        <img src="./Img-pagina-inicial/Notas-icon.png" alt="">
+                        Ver cardápios
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img class="prato-sushi" src="./Img-pagina-inicial/Prato-Sushi-principal.png" alt="Prato de sushi com salmão, arroz e alga">
+            </div>
+        </section>
+
+
+        <section class="features">
+            <div class="features-small">
+                <div class="feature-card-minus">
+                    <span class="feature-icon">
+                        <img src="./Img-pagina-inicial/Mini-sushi.png" alt="Ícone de ingredientes frescos">
+                    </span>
+                    <p><span>Ingredientes</span><br>frescos</p>
+                </div>
+
+                <div class="feature-card-minus">
+                    <span class="feature-icon">
+                        <img src="./Img-pagina-inicial/Mini-moto.png" alt="Ícone de entrega rápida">
+                    </span>
+                    <p><span>Entrega rápida</span><br>e segura</p>
+                </div>
+
+                <div class="feature-card-minus">
+                    <span class="feature-icon">
+                        <img src="./Img-pagina-inicial/Mini-coracao.png" alt="Ícone de feito com paixão">
+                    </span>
+                    <p><span>Feito com</span><br>paixão</p>
+                </div>
+            </div>
+
+            <a class="feature-card feature-card-wide" aria-disabled="true">
+                <span class="feature-icon feature-icon--wide">
+                    <img src="./Img-pagina-inicial/Icon-map.png" alt="">
+                </span>
+                <div class="feature-wide-text">
+                    <p class="feature-title">Atendemos na sua região</p>
+                    <p class="feature-subtitle">Consulte o delivery</p>
+                </div>
+                <span class="chevron">›</span>
+            </a>
+        </section>
+    </main>
+
+    <!--
+         FOOTER 
+        Obs: Mudar as logos dos apps "Whatsapp, Instagram, Facebook"
+    -->
+    <footer class="site-footer">
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <div class="logo-group">
+                    <img class="hashi-header" src="./Img-pagina-inicial/Logo-Site.png" alt="Logo Hashi">
+                    <img class="hashi-header-logo" src="./Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+                </div>
+                <p class="footer-tagline">Sabor, tradição e excelência da culinária japonesa, direto na porta da sua casa.</p>
+
+                <div class="footer-social">
+                    <a aria-disabled="true" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a aria-disabled="true" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 9h2.5V6H14c-2 0-3.5 1.6-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.6c0-.4.3-.6.5-.6Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a aria-disabled="true" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M8.5 8.7c.2-.4.6-.4.9-.4h.6c.2 0 .5 0 .7.5.2.6.7 1.8.8 2 .1.2.1.4 0 .6-.1.3-.2.4-.4.6-.2.2-.4.4-.2.7.6 1 1.6 2 3 2.5.3.1.4 0 .6-.2.2-.2.7-.8 1-1 .2-.2.4-.2.6-.1.3.1 1.7.8 2 .9.3.1.5.2.5.4 0 .2 0 1-.4 1.5-.4.6-1.8 1-2.4 1-1.4.1-2.9-.5-4.6-1.9-2.1-1.6-3.3-3.6-3.5-4-.2-.4-1.3-2-1.1-3.7.1-.7.6-1.2.8-1.4Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#inicio">Início</a>
+                <a href="./Html/cardapios.html">Cardápios</a>
+                <a href="./Html/promocoes.html">Promoções</a>
+                <a href="Html/atendimento.html">Ajuda</a>
+                <a href="#cadastro-entregador">Seja um entregador</a>
+            </div>
+
+            <div class="footer-links" id="atendimento">
+                <h4>Atendimento</h4>
+                <a href="Html/atendimento.html">Fale conosco</a>
+                <a aria-disabled="true">Perguntas frequentes</a>
+                <a aria-disabled="true">Trocas e devoluções</a>
+                <a aria-disabled="true">Política de privacidade</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Atendemos em todo Brasil</p>
+                <p>(34) 99898-9966</p>
+                <p>contato@hashi.com.br</p>
+                <p class="footer-hours">24 horas por dia com entregadores <br> ao seu dispor</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Hashi. Todos os direitos reservados.</p>
+            <p>Feito com <span class="footer-heart">♥</span> e muito wasabi.</p>
+        </div>
+    </footer>
+    
+    <dialog class="recuperar-senha" id="recuperar-senha" aria-labelledby="recuperar-titulo" aria-describedby="recuperar-descricao">
+        <a class="recuperar-fechar" href="#flex-login" aria-label="Voltar ao login">&times;</a>
+        <img class="recuperar-logo" src="./Img-pagina-inicial/Logo-Login.png" alt="Hashi">
+        <h2 id="recuperar-titulo">Recuperar senha</h2>
+        <p id="recuperar-descricao">Informe o e-mail que você usou para criar sua conta.</p>
+
+        <form class="recuperar-form"><button type="submit" hidden disabled></button>
+            <label for="recuperar-email">E-mail</label>
+            <input type="email" id="recuperar-email" placeholder="seuemail@exemplo.com" autocomplete="email" required >
+            <button disabled class="recuperar-enviar" type="submit">Solicitar recuperação</button>
+            <p class="recuperar-status" role="status"></p>
+        </form>
+        <a class="recuperar-voltar" href="#flex-login" aria-label="Voltar ao login">Voltar para o login</a>
+    </dialog>
+
+    <!-- TELA DE LOGIN -->
+    <div class="fundo-login" id="flex-login">
+
+        <div class="login">
+            <a class="recuperar-fechar" href="#inicio" aria-label="Fechar login">&times;</a>
+            <img class="logo-login" src="./Img-pagina-inicial/Logo-Login.png" alt="Logo">
+            <h2 class="Bem-vindo">Bem-vindo de volta!</h2>
+
+            <form id="form-login" method="post">
+                <div class="Email">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" autocomplete="username" required>
+            </div>
+
+            <div class="Senha">
+                <label for="senha">Senha:</label>
+                <div class="campo-senha-visual">
+                    <input type="password" id="senha" name="senha" autocomplete="current-password" required placeholder="••••••••">
+                    <button class="visualizar-senha visualizar-senha-icone" type="button" aria-controls="senha" aria-label="Mostrar senha" hidden>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path class="senha-icone-risco" d="M3 3l18 18"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+                <button class="Entrar-Button" type="submit">Entrar</button>
+                <p id="aviso-login" role="status"></p>
+            </form>
+
+            <a class="Senha-Esq" href="#recuperar-senha" aria-haspopup="dialog">Esqueceu sua senha?</a>
+
+            <div class="Nao-tem-uma-conta">
+                <p>
+                    Não tem uma conta?
+                </p>
+                <a href="#tela-selecao" id="abrir-cadastro">Cadastrar-se</a>
+            </div>
+
+
+        </div>
+
+    </div>
+    
+
+    <!-- TELA DE SELEÇÃO -->
+    <dialog class="selecao" id="tela-selecao" aria-labelledby="titulo-selecao" aria-describedby="descricao-selecao">
+        <a class="selecao-fechar" href="#flex-login" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg>
+            </a>
+
+        <div class="selecao-logos">
+            <img class="logo-selecao-logo" src="./Img-pagina-inicial/Logo-Site.png" alt="">
+            <img class="logo-selecao-escrita" src="./Img-pagina-inicial/Logo-hashi.png" alt="Hashi">
+        </div>
+
+        <h2 id="titulo-selecao">Criar sua conta</h2>
+        <p class="selecao-descricao" id="descricao-selecao">Escolha como você deseja usar o Hashi</p>
+
+        <div class="selecao-form">
+            <fieldset class="selecao-opcoes" aria-label="Tipo de conta">
+                <a class="selecao-card" href="#cadastro-cliente">
+                        <svg class="selecao-icone" viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="24" cy="15" r="9"/><path d="M8 41v-4a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v4Z"/>
+                        </svg>
+                        <strong id="perfil-cliente">Cliente</strong>
+                        <span>Faça pedidos e aproveite nossas delícias</span>
+                    </a>
+
+                <a class="selecao-card" href="#cadastro-loja">
+                        <svg class="selecao-icone" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M4 18 10 6h28l6 12v3a5 5 0 0 1-10 0 5 5 0 0 1-10 0 5 5 0 0 1-10 0 5 5 0 0 1-10 0Zm0 0h40M17 6l-3 12m10-12v12m7-12 3 12M8 26v15h32V26M20 41V30h8v11"/>
+                        </svg>
+                        <strong id="perfil-loja">Loja</strong>
+                        <span>Gerencie sua loja com a gente</span>
+                    </a>
+
+                <a class="selecao-card" href="#cadastro-entregador">
+                        <svg class="selecao-icone" viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="10" cy="37" r="5"/><circle cx="37" cy="37" r="5"/>
+                            <path d="M2 37v-5a7 7 0 0 1 7-7h13m-7 12h13l5-14-3-10h6m-3 10h3a8 8 0 0 1 8 8v6h-2M7 25v-6h13v6m4-10 1-5 6-3m-7 8 5 2-3 11h-6"/>
+                            <circle cx="33" cy="7" r="4"/>
+                        </svg>
+                        <strong id="perfil-entregador">Entregador</strong>
+                        <span>Entregue e ganhe com o Hashi</span>
+                    </a>
+            </fieldset>
+
+            <div class="selecao-divisor" aria-hidden="true">
+                <img src="./Img-pagina-inicial/Mini-sushi.png" alt="">
+            </div>
+
+            
+        </div>
+
+        <p class="selecao-login">Já tem uma conta? <a href="#flex-login">Entrar</a></p>
+    </dialog>
+
+
+    <!-- TELA DE CADASTRO -->
+    <div class="fundo-cadastro" id="cadastro-cliente">
+    
+        <div class="cadastro">
+    
+            <a class="fechar-cadastro" href="#flex-login" aria-label="Voltar ao login">&#10005;</a>
+    
+            <h2>Cadastro de cliente</h2>
+            <a class="trocar-perfil" href="#tela-selecao">Trocar tipo de conta</a>
+    
+            
+    
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label class="Icons-representativos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    Nome completo
+                </label>
+                <input type="text" placeholder="Seu nome">
+            </div>
+    
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label class="Icons-representativos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+                    E-mail
+                </label>
+                <input type="email" placeholder="seuemail@gmail.com">
+            </div>
+    
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label class="Icons-representativos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3c1 3 1.5 5 3 6-1 2-1.5 2.5-1 4 1.5 3 4 5.5 7 7 1.5.5 2 0 4-1 1-1.5 3-1 6 3 .7 1.2 0 3-1.2 4-8.5 1-16-6.5-15-15C4 5.2 4.8 4.5 6 3z"/></svg>
+                    Telefone
+                </label>
+                <input type="tel" placeholder="(00) 00000-0000">
+            </div>
+    
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label class="Icons-representativos" for="cliente-endereco">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10l9-7 9 7v10H3zM9 20v-6h6v6"/></svg>
+                    Endereço de entrega
+                </label>
+                <input id="cliente-endereco" type="text" autocomplete="street-address" placeholder="Rua, número, bairro e cidade">
+            </div>
+
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label class="Icons-representativos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Senha
+                </label>
+                <div class="campo-senha-wrapper">
+                    <input type="password" placeholder="••••••••••••" id="campo-senha" autocomplete="new-password" placeholder="Crie uma senha">
+                    <button class="visualizar-senha" type="button" aria-controls="campo-senha" hidden>Mostrar</button>
+                    
+                </div>
+            </div>
+    
+            <label class="termos">
+                <input type="checkbox">
+                Li e concordo com os <a aria-disabled="true">Termos de Uso</a>
+            </label>
+    
+            <button disabled class="btn-cadastrar" type="button">Cadastrar</button>
+    
+            <div class="login-link">
+                Já tem uma conta? <a href="#flex-login" id="voltar-login">Entrar</a>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- TELA DE CADASTRO DE LOJA -->
+    <dialog class="cadastro cadastro-loja" id="cadastro-loja" aria-labelledby="titulo-cadastro-loja">
+        <a class="fechar-cadastro" href="#flex-login" aria-label="Fechar">&#10005;</a>
+        <h2 id="titulo-cadastro-loja">Cadastro de loja</h2>
+        <a class="trocar-perfil" href="#tela-selecao">Trocar tipo de conta</a>
+
+        <form id="form-cadastro-loja"><button type="submit" hidden disabled></button>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-nome">Nome da loja</label>
+                <input id="loja-nome" name="nome" required type="text" autocomplete="organization" placeholder="Nome do restaurante">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-cnpj">CNPJ</label>
+                <input id="loja-cnpj" name="cnpj" required type="text" inputmode="numeric" placeholder="00.000.000/0000-00">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-responsavel">Nome do responsável</label>
+                <input id="loja-responsavel" name="responsavel" required type="text" autocomplete="name" placeholder="Nome completo">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-email">E-mail comercial</label>
+                <input id="loja-email" name="email" required type="email" autocomplete="email" placeholder="contato@restaurante.com.br">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-telefone">Telefone comercial</label>
+                <input id="loja-telefone" name="telefone" required type="tel" autocomplete="tel" placeholder="(00) 00000-0000">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-endereco">Endereço da loja</label>
+                <input id="loja-endereco" name="endereco" required type="text" autocomplete="street-address" placeholder="Rua, número, bairro e cidade">
+            </div>
+            <div class="Caixa">
+                <span class="indicator"></span>
+                <label for="loja-senha">Senha</label>
+                <div class="campo-senha-visual">
+                    <input id="loja-senha" name="senha" required type="password" autocomplete="new-password" placeholder="Crie uma senha">
+                    <button class="visualizar-senha" type="button" aria-controls="loja-senha" hidden>Mostrar</button>
+                </div>
+            </div>
+            <label class="termos">
+                <input type="checkbox" required>
+                Li e concordo com os Termos de Uso
+            </label>
+            <button disabled class="btn-cadastrar" type="submit">Cadastrar loja</button>
+        </form>
+    </dialog>
+
+    <!-- TELA DE CADASTRO 2 -->
+    <div class="fundo-cadastro2" id="cadastro-entregador">
+    
+        <div class="cadastro2">
+    
+            <a class="fechar-cadastro2" href="#flex-login" aria-label="Voltar ao login">&#10005;</a>
+    
+            <h2>Cadastro de entregador</h2>
+            <a class="trocar-perfil" href="#tela-selecao">Trocar tipo de conta</a>
+
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    Nome completo
+                </label>
+                <input type="text" placeholder="Seu nome">
+            </div>
+    
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+                    E-mail
+                </label>
+                <input type="email" placeholder="seuemail@gmail.com">
+            </div>
+    
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3c1 3 1.5 5 3 6-1 2-1.5 2.5-1 4 1.5 3 4 5.5 7 7 1.5.5 2 0 4-1 1-1.5 3-1 6 3 .7 1.2 0 3-1.2 4-8.5 1-16-6.5-15-15C4 5.2 4.8 4.5 6 3z"/></svg>
+                    Telefone
+                </label>
+                <input type="text" placeholder="(00) 00000-0000">
+            </div>
+    
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                    CPF
+                </label>
+                <input type="text" placeholder="000.000.000-00">
+            </div>
+    
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3c1 3 1.5 5 3 6-1 2-1.5 2.5-1 4 1.5 3 4 5.5 7 7 1.5.5 2 0 4-1 1-1.5 3-1 6 3 .7 1.2 0 3-1.2 4-8.5 1-16-6.5-15-15C4 5.2 4.8 4.5 6 3z"/></svg>
+                    Veiculo
+                </label>
+                <input type="text" placeholder="Ex: Moto, Carro">
+            </div>
+    
+            <div class="Caixa2">
+                <span class="indicator2"></span>
+                <label class="Icons-representativos2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                    Senha
+                </label>
+                <div class="campo-senha-wrapper2">
+                    <input type="password" placeholder="••••••••••••" id="campo-senha-2" autocomplete="new-password" placeholder="Crie uma senha">
+                    <button class="visualizar-senha" type="button" aria-controls="campo-senha-2" hidden>Mostrar</button>
+                    
+                </div>
+            </div>
+    
+            <label class="termos2">
+                <input type="checkbox">
+                Li e concordo com os <a aria-disabled="true">Termos de Uso</a>
+            </label>
+    
+            <button disabled class="btn-cadastrar2" type="button">Cadastrar</button>
+    
+            <div class="login-link2">
+                Já tem uma conta? <a href="#flex-login" id="voltar-login2">Entrar</a>
+            </div>
+    
+        </div>
+    
+    </div>
+
+
+
+    <script src="./JavaScript/login.js"></script>
+    <script src="./JavaScript/perfil.js"></script>
+</body>
+</html>
